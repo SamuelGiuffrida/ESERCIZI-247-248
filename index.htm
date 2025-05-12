@@ -8,7 +8,7 @@
         function calcola () 
         {
          var incasso = parseFloat(document.getElementById("casella").value);
-         var somma = parseFloat(document.getElementbyId("totale").value) + incasso;
+         var somma = parseFloat(document.getElementById("totale").value) + incasso;
          document.getElementById("totale").value = somma.toFixed(2);
          document.getElementById("casella").value = "";
         }
@@ -26,6 +26,6 @@
     </form>
 
    <p><a href="index2.htm">Passa all'esercizio 248 cliccando qui</a></p> 
-   
+
 </body>
 </html>
