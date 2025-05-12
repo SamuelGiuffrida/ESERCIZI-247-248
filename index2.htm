@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTERESSE COMPOSTO</title>
+    <script type="text/javascript">
+        function calcola(form)
+        {
+            var capitale = parseFloat(document.getElementById("capitale").value);
+            var tasso = parseFloat(document.getElementById("tasso").value);
+            var durata = parseFloat(document.getElementById("durata").value);
+            var tassoUnit = tasso / 100;
+            var montante = capitale * Math.pow((1+TassoUnit), durata);
+            var interesse = montante - capitale;
+            document.getElementByid("interesse").value = interesse.toFixed(2)
+            document.getElementByid("montante").value = montante.toFixed(2)
+        }
+    </script>
+
+    <style type="text/css">
+        input 
+        {
+            text-align: right 
+        }
+        label 
+        {
+            float: left;
+            width: 150px 
+        }
+    </style>
+</head>
+<body>
+    <h2>Calcolo dell'Interesse Composto</h2>
+    <form id="calcoli">
+        <fieldset>
+            <legend>Dati per il calcolo</legend>
+            <p>
+                <label for="capitale">Capitale iniziale C</label>
+                <input type="text" id="capitale"> &euro;
+            </p>
+             <p>
+                <label for="tasso">Tasso di interesse i</label>
+                <input type="text" id="tasso"> %
+            </p>
+            <p>
+                <label for="durata">Tempo t</label>
+                <input type="text" id="durata"> %
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Risultati</legend>
+            <p>
+                <label for="interesse">Interessi I</label>
+                <input type="text" id="interesse" readonly> &euro;
+            </p>
+             <p>
+                <label for="montante">Montante M</label>
+                <input type="text" id="montante" readonly> &euro;
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
