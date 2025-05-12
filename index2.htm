@@ -9,9 +9,9 @@
         {
             var capitale = parseFloat(document.getElementById("capitale").value);
             var tasso = parseFloat(document.getElementById("tasso").value);
-            var durata = parseFloat(document.getElementById("durata").value);
+            var durata = parseInt(document.getElementById("durata").value);
             var tassoUnit = tasso / 100;
-            var montante = capitale * Math.pow((1+TassoUnit), durata);
+            var montante = capitale * Math.pow((1+tassoUnit), durata);
             var interesse = montante - capitale;
             document.getElementById("interesse").value = interesse.toFixed(2)
             document.getElementById("montante").value = montante.toFixed(2)
